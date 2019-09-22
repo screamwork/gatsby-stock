@@ -32,6 +32,9 @@ const Layout = ({ children }) => {
       let scrollPos = window.scrollY;
       navs.forEach((nav) => {
         let refElement = document.querySelector(`${nav.getAttribute("href")}`);
+        if(!refElement) {
+          return;
+        }
         if (refElement.offsetTop <= scrollPos && 
             refElement.offsetTop + refElement.offsetHeight > scrollPos) {
 
