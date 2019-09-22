@@ -1,9 +1,21 @@
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Image, Row } from "react-bootstrap"
 import { FaFacebook, FaInstagram } from "react-icons/fa"
 
 export const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      desktop: file(relativePath: { eq: "logo-stogg.jpg" }) {
+        childImageSharp {
+          fluid(quality: 50, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <footer style={{ minHeight: 50, background: "#343a40" }}>
       <Container style={{ padding: `1rem 0`, color: "white" }}>
@@ -11,9 +23,12 @@ export const Footer = () => {
           <Col>
             © {new Date().getFullYear()}
             {` `}
-            <a href="#" style={{ color: "white", textDecoration: "none" }}>
-              KFZ-Stogg
-            </a>{" "}
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              <Image
+                src={`logo-stogg.png`}
+                style={{ height: 30, marginBottom: 0 }}
+              />
+            </Link>{" "}
             <span style={{ margin: "0 1rem" }}>|</span>
             <Link
               to="/privatepolicy/"
