@@ -48,10 +48,10 @@ export const ContactForm = ({ onChildStateChange, onFormSend, myForm }) => {
           <Button
             type="submit"
             variant="success"
-            onClick={e => {
-              e.preventDefault()
-              onFormSend()
-            }}
+            // onClick={e => {
+            //   e.preventDefault()
+            //   onFormSend()
+            // }}
           >
             Submit
           </Button>
