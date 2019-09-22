@@ -37,7 +37,7 @@ const Header = ({ siteTitle, siteSlogan }) => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link href="#services">Service</Nav.Link>
-          <Nav.Link href="#places">Standorte</Nav.Link>
+          {/* <Nav.Link href="#places">Standorte</Nav.Link> */}
           <Nav.Link href="#pricing">Preis</Nav.Link>
           <Nav.Link href="#contact">Kontakt</Nav.Link>
         </Nav>

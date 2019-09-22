@@ -25,6 +25,26 @@ const Layout = ({ children }) => {
 
   const { title, slogan } = data.site.siteMetadata
 
+  // 
+  React.useEffect(() => {
+    let navs = document.querySelectorAll('.navbar-nav > a');
+    document.addEventListener('scroll', () => { 
+      let scrollPos = window.scrollY;
+      navs.forEach((nav) => {
+        let refElement = document.querySelector(`${nav.getAttribute("href")}`);
+        if (refElement.offsetTop <= scrollPos && 
+            refElement.offsetTop + refElement.offsetHeight > scrollPos) {
+
+            navs.forEach(x => x.classList.remove('active'));
+            nav.classList.add("active");
+        } else{
+            nav.classList.remove("active");
+        }
+      });
+    })
+    return () =>document.removeEventListener('scroll', () => {});
+  }, [])
+
   return (
     <>
       <Header siteTitle={title} siteSlogan={slogan} />
