@@ -1,0 +1,36 @@
+.portfolio-gallery {
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.blurbs {
+  .blurb-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    border: 4px solid #e5e5e5;
+    box-shadow: 3px 3px 3px 1px #eee;  
+  }
+}
+
+.address {
+  h3 {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+    font-weight: 500;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
+  svg {
+    margin-right: 7.5px;
+    font-size: 15px;
+  }
+}

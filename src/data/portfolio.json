@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Image 1",
+    "subtitle": "des Erste in der Woche",
+    "url": "portfolio1.jpg"
+  },
+  {
+    "title": "Image 2",
+    "subtitle": "des Zweite in der Woche",
+    "url": "portfolio2.jpg"
+  },
+  {
+    "title": "Image 3",
+    "subtitle": "des Dritte in der Woche",
+    "url": "portfolio3.jpg"
+  }
+]
