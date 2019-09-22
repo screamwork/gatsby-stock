@@ -23,6 +23,13 @@ export const Services = () => {
             </h2>
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <h2 className="service-slogan" style={{margin: "0 0 3rem"}}>
+              Ihr KFZ braucht Rundumpflege und "wie neu gemacht"?
+            </h2>
+          </Col>
+        </Row>
         <Row className="service-row">
           <Col xs={12} md={6}>
             <p>
