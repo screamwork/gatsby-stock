@@ -6,7 +6,7 @@ import "./pricetables.css"
 export const PriceTables = ({ onPackageSelect }) => {
   const buynow = paket => {
     let obj = {
-      message: `- Paket "${paket}"\n( Info: Dauer mindestens 2 Tage bei Paket "${paket}"! )`,
+      message: `- Paket "${paket}"\n\nDanke ich komme schnellstmöglich auf Sie zurück!`,
     }
     onPackageSelect(obj)
     window.location.href = "#contact"
