@@ -34,11 +34,13 @@ const BackgroundSection = ({
         >
           <Container>
             <Row>
-              <Col md={6}>
-                <h2 style={{ color: "white" }}>{headerTitle}</h2>
-                <h4 style={{ color: "#4fcc70", padding: `1rem 0` }}>
+              <Col xs={12} md={7}>
+                <h3 style={{ color: "whitesmoke" }}>
+                  {headerTitle.toUpperCase()}
+                </h3>
+                <h2 style={{ color: "#4fcc70", padding: `.5rem 0 1rem` }}>
                   {headerSubtitle.toUpperCase()}
-                </h4>
+                </h2>
                 <p style={{ color: "whitesmoke" }}>{headerText}</p>
               </Col>
             </Row>
