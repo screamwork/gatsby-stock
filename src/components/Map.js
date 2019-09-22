@@ -74,8 +74,11 @@ const addMarkers = links => map => {
       label: `${index + 1}`,
       title: link.title,
     })
+    const infowindow = new window.google.maps.InfoWindow({
+      content: link.address,
+    })
     marker.addListener(`click`, () => {
-      window.location.href = link.url
+      infowindow.open(map, marker)
     })
   })
 }
@@ -94,6 +97,21 @@ Map.defaultProps = {
         lat: LAT,
         lng: LNG,
       },
+      address: "Wilhelmsreut<br />(Basis)",
+    },
+    {
+      coords: {
+        lat: parseFloat(48.803),
+        lng: parseFloat(13.548),
+      },
+      address: "Freyung<br />(Halle)",
+    },
+    {
+      coords: {
+        lat: parseFloat(48.777),
+        lng: parseFloat(13.511),
+      },
+      address: "Kumreut<br />(Busse)",
     },
   ]),
 }

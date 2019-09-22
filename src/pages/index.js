@@ -1,5 +1,6 @@
+// @ts-check
 import "bootstrap/dist/css/bootstrap.min.css"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import React from "react"
 import { Address } from "../components/Address"
 import StyledBackgroundSection from "../components/BackgroundSection"
@@ -15,101 +16,129 @@ import { Services } from "../components/Services"
 import { VCModal } from "../components/VCModal"
 import "./index.scss"
 
-const IndexPage = () => {
-  const [myForm, setMyForm] = React.useState({
-    email: "",
-    message: "",
-  })
-
-  const [modal, setModal] = React.useState({
-    show: false,
-    img: null,
-  })
-
-  const onChildStateChange = e => {
-    let s = myForm
-    s[e.target.name] = e.target.value
-    setMyForm(s)
-  }
-
-  const onFormSend = () => {
-    if (myForm.email === "" || myForm.message === "") {
-      return
-    }
-    if (validateEmail(myForm.email)) {
-      console.log("send form:", myForm)
-      setMyForm({
+class IndexPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      myForm: {
         email: "",
         message: "",
-      })
+      },
+      modal: {
+        show: false,
+        img: null,
+      },
+    }
+  }
+
+  onPackageSelect = obj => {
+    this.setState(state => (state.myForm = obj))
+  }
+
+  onModalChange = obj => {
+    this.setState(state => (state.modal = obj))
+  }
+
+  onChildStateChange = e => {
+    let s = this.state.myForm
+    s[e.target.name] = e.target.value
+    console.log(s)
+    this.setState(state => (state.myForm = s))
+  }
+
+  onFormSend = () => {
+    if (this.state.myForm.email === "" || this.state.myForm.message === "") {
+      return
+    }
+    if (this.validateEmail(this.state.myForm.email)) {
+      console.log("send form:", this.state.myForm)
+      this.setState(
+        state =>
+          (state.myForm = {
+            email: "",
+            message: "",
+          })
+      )
     } else {
       console.log("no valid email")
     }
   }
 
-  const validateEmail = email => {
+  validateEmail = email => {
     const re = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")
     return re.test(email)
   }
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { base: { eq: "home.json" } }) {
-        edges {
-          node {
-            childDataJson {
-              headerTitle
-              headerSubtitle
-              headerText
+  render() {
+    const { myForm, modal } = this.state
+
+    return (
+      <StaticQuery
+        query={graphql`
+          query {
+            allFile(filter: { base: { eq: "home.json" } }) {
+              edges {
+                node {
+                  childDataJson {
+                    headerTitle
+                    headerSubtitle
+                    headerText
+                  }
+                }
+              }
             }
           }
-        }
-      }
-    }
-  `)
+        `}
+        render={data => {
+          const {
+            headerTitle,
+            headerSubtitle,
+            headerText,
+          } = data.allFile.edges[0].node.childDataJson
 
-  const {
-    headerTitle,
-    headerSubtitle,
-    headerText,
-  } = data.allFile.edges[0].node.childDataJson
+          return (
+            <Layout>
+              <SEO title="Home" />
 
-  return (
-    <Layout>
-      <SEO title="Home" />
+              <VCModal
+                modal={modal}
+                show={modal.show}
+                onHide={() =>
+                  this.setState(
+                    state =>
+                      (state.modal = {
+                        show: false,
+                        img: null,
+                      })
+                  )
+                }
+              />
 
-      <VCModal
-        modal={modal}
-        show={modal.show}
-        onHide={() =>
-          setModal({
-            show: false,
-            img: null,
-          })
-        }
+              <StyledBackgroundSection
+                className="hero"
+                headerTitle={headerTitle}
+                headerSubtitle={headerSubtitle}
+                headerText={headerText}
+              />
+
+              <Blurbs />
+              <PortfolioCarousel />
+              <Services />
+              <PortfolioGallery onModalChange={this.onModalChange} />
+              <PriceTables onPackageSelect={this.onPackageSelect} />
+              <Map />
+              <ContactForm
+                onChildStateChange={this.onChildStateChange}
+                myForm={myForm}
+                // onFormSend={onFormSend}
+              />
+              <Address />
+            </Layout>
+          )
+        }}
       />
-
-      <StyledBackgroundSection
-        className={`hero`}
-        headerTitle={headerTitle}
-        headerSubtitle={headerSubtitle}
-        headerText={headerText}
-      />
-
-      <Blurbs />
-      <PortfolioCarousel />
-      <Services />
-      <PortfolioGallery setModal={setModal} />
-      <PriceTables setMyForm={setMyForm} />
-      <Map />
-      <ContactForm
-        onChildStateChange={onChildStateChange}
-        onFormSend={onFormSend}
-        myForm={myForm}
-      />
-      <Address />
-    </Layout>
-  )
+    )
+  }
 }
 
 export default IndexPage

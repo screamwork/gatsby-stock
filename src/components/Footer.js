@@ -1,21 +1,9 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 import { Col, Container, Image, Row } from "react-bootstrap"
 import { FaFacebook, FaInstagram } from "react-icons/fa"
 
 export const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      desktop: file(relativePath: { eq: "logo-stogg.jpg" }) {
-        childImageSharp {
-          fluid(quality: 50, maxWidth: 200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <footer style={{ minHeight: 50, background: "#343a40" }}>
       <Container style={{ padding: `1rem 0`, color: "white" }}>
@@ -46,10 +34,15 @@ export const Footer = () => {
                 href="https://www.facebook.com/andi.stockinger"
                 target="_blank"
                 style={{ marginRight: "1rem" }}
+                rel="noopener noreferrer"
               >
                 <FaFacebook size={32} style={{ color: "#4fcc70" }} />
               </a>
-              <a href="#" target="_blank">
+              <a
+                href="https://instagram.com/stockinger_andi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram size={32} style={{ color: "#4fcc70" }} />
               </a>
             </Col>

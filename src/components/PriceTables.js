@@ -1,14 +1,14 @@
 import React from "react"
+import { Col, Row } from "react-bootstrap"
 import { FaCheck } from "react-icons/fa"
 import "./pricetables.css"
-import { Row, Col } from 'react-bootstrap'
 
-export const PriceTables = ({ setMyForm }) => {
+export const PriceTables = ({ onPackageSelect }) => {
   const buynow = paket => {
     let obj = {
       message: `- Paket "${paket}"\n( Info: Dauer mindestens 2 Tage bei Paket "${paket}"! )`,
     }
-    setMyForm(obj)
+    onPackageSelect(obj)
     window.location.href = "#contact"
   }
 
@@ -67,14 +67,14 @@ export const PriceTables = ({ setMyForm }) => {
                   </ul>
                 </div>
                 <div className="generic_price_btn clearfix">
-                  <a
+                  <button
                     onClick={e => {
                       e.preventDefault()
                       buynow("easy")
                     }}
                   >
                     Jetzt buchen
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -113,14 +113,14 @@ export const PriceTables = ({ setMyForm }) => {
                   </ul>
                 </div>
                 <div className="generic_price_btn clearfix">
-                  <a
+                  <button
                     onClick={e => {
                       e.preventDefault()
                       buynow("standard")
                     }}
                   >
                     Jetzt buchen
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

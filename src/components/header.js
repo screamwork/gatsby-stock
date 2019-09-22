@@ -1,20 +1,20 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { Image, Nav, Navbar } from "react-bootstrap"
 
 const Header = ({ siteTitle, siteSlogan }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      desktop: file(relativePath: { eq: "logo-stogg.jpg" }) {
-        childImageSharp {
-          fluid(quality: 50, maxWidth: 200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     desktop: file(relativePath: { eq: "logo-stogg.jpg" }) {
+  //       childImageSharp {
+  //         fluid(quality: 50, maxWidth: 200) {
+  //           ...GatsbyImageSharpFluid_withWebp
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">

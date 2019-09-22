@@ -110,7 +110,7 @@
   border-left: 5px solid #2ecc71;
 }
 
-#generic_price_table .generic_content .generic_price_btn a {
+#generic_price_table .generic_content .generic_price_btn button {
   border: 1px solid #2ecc71;
   color: #2ecc71;
 }
@@ -144,8 +144,8 @@
   color: #fff;
 }
 
-#generic_price_table .generic_content:hover .generic_price_btn a,
-#generic_price_table .generic_content.active .generic_price_btn a {
+#generic_price_table .generic_content:hover .generic_price_btn button,
+#generic_price_table .generic_content.active .generic_price_btn button {
   background-color: #2ecc71;
   color: #fff;
 }
@@ -303,7 +303,7 @@
   margin: 20px 0 32px;
 }
 
-#generic_price_table .generic_content .generic_price_btn a {
+#generic_price_table .generic_content .generic_price_btn button {
   border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
@@ -344,8 +344,8 @@
   h2,
 #generic_price_table .generic_content .price,
 #generic_price_table .generic_content:hover .price,
-#generic_price_table .generic_content .generic_price_btn a,
-#generic_price_table .generic_content:hover .generic_price_btn a {
+#generic_price_table .generic_content .generic_price_btn button,
+#generic_price_table .generic_content:hover .generic_price_btn button {
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -ms-transition: all 0.3s ease-in-out 0s;

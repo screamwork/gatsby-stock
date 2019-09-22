@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { Col, Container, Image, Row } from "react-bootstrap"
 
-export const PortfolioGallery = ({ setModal }) => {
+export const PortfolioGallery = ({ onModalChange }) => {
   const data = useStaticQuery(graphql`
     query PortfolioGallery {
       allFile(filter: { base: { eq: "portfolio.json" } }) {
@@ -45,8 +45,7 @@ export const PortfolioGallery = ({ setModal }) => {
                 style={{ height: `350px` }}
                 thumbnail
                 onClick={e => {
-                  console.log(portfolio.url)
-                  setModal({ show: true, img: portfolio.url })
+                  onModalChange({ show: true, img: portfolio.url })
                 }}
               />
             </Col>

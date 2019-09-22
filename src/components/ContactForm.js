@@ -1,7 +1,7 @@
 import React from "react"
 import { Button, Container, Form } from "react-bootstrap"
 
-export const ContactForm = ({ onChildStateChange, onFormSend, myForm }) => {
+export const ContactForm = ({ onChildStateChange, myForm }) => {
   return (
     <div id="contact" style={{ background: "whiteSmoke" }}>
       <Container style={{ padding: "6rem 0 6rem" }}>
@@ -17,7 +17,7 @@ export const ContactForm = ({ onChildStateChange, onFormSend, myForm }) => {
         >
           Kontakt
         </h2>
-        <Form
+        <form
           style={{ padding: "2.5rem", background: "#e5e5e5" }}
           method="POST"
           netlify-honeypot="bot-field"
@@ -32,6 +32,7 @@ export const ContactForm = ({ onChildStateChange, onFormSend, myForm }) => {
               placeholder="name@example.com"
               onChange={onChildStateChange}
               value={myForm.email}
+              // defaultValue={myForm.email}
             />
           </Form.Group>
           <Form.Group>
@@ -43,6 +44,7 @@ export const ContactForm = ({ onChildStateChange, onFormSend, myForm }) => {
               placeholder="Hallo..."
               onChange={onChildStateChange}
               value={myForm.message}
+              // defaultValue={myForm.message}
             />
           </Form.Group>
           <Button
@@ -55,7 +57,7 @@ export const ContactForm = ({ onChildStateChange, onFormSend, myForm }) => {
           >
             Submit
           </Button>
-        </Form>
+        </form>
       </Container>
     </div>
   )
