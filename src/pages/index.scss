@@ -44,7 +44,7 @@
     padding: 1rem;
     border: 4px solid #e5e5e5;
     box-shadow: 3px 3px 3px 1px #eee;
-    transition: .5s all;
+    transition: 0.5s all;
     margin-top: 0;
 
     &:hover {
@@ -52,7 +52,6 @@
       color: white;
       margin-top: -10px;
     }
-
 
     @media (max-width: 991px) {
       margin-bottom: 30px;
@@ -171,8 +170,22 @@ footer.footer {
 
 .insta-img {
   overflow: hidden;
-  transition: .7s all;
+  transition: 0.7s all;
   &:hover {
-    transform: scale(1.2)
+    transform: scale(1.2);
+  }
+}
+
+.service-row {
+  p {
+    display: flex;
+    align-items: top;
+    span {
+    }
+    svg {
+      color: #4fcc70;
+      margin: 0 9px 0 0;
+      font-size: 19px
+    }
   }
 }

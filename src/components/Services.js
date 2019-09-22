@@ -1,5 +1,7 @@
 import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
+import { FaCheck, FaHeart } from "react-icons/fa"
+import {Link} from 'gatsby'
 
 export const Services = () => {
   return (
@@ -19,6 +21,42 @@ export const Services = () => {
             >
               Services
             </h2>
+          </Col>
+        </Row>
+        <Row className="service-row">
+          <Col xs={12} md={6}>
+            <p>
+              <FaCheck />
+              <span>Wir nehmen KFZ aller Arten ausser Baufahrezuge<br />
+                und Motorisierung unter 50ccm.
+              </span>
+            </p>
+            <p>
+              <FaCheck />
+              <span>Wir bieten Abhol / Bring - Service<br />
+                benutzen Sie einfach das <Link to="#contact">Kontaktformular.</Link>
+              </span>
+            </p>
+            <p>
+              <FaCheck />
+              <span>Wir verwenden unsere ausgewiesen Fachprodukte<br />welche sich immer wieder neu beweisen müssen.</span>
+            </p>
+          </Col>
+          <Col xs={12} md={6}>
+            <p>
+              <FaCheck />
+              <span>Wir sind Versichert für eventuell entandenden Schaden.</span>
+            </p>
+            <p>
+              <FaCheck />
+              <span>Freitags bis spätestens 19:30 Uhr müssen die Autos von Hof<br />
+                oder sie bleiben über Wochenende.
+              </span>
+            </p>
+            <p>
+              <FaCheck />
+              <span>Wir verwenden keine künstlichen Substanzen<br />die Umwelt liegt uns am <FaHeart />!</span>
+            </p>
           </Col>
         </Row>
       </Container>
