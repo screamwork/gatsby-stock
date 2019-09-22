@@ -2,7 +2,16 @@
 
   @media (max-width: 568px) {
     .container {
-      padding-top: 3rem !important;
+      padding: 3rem 0 !important;
+    }
+    .row > div {
+      margin-bottom: 15px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .row > div {
+      margin-bottom: 30px;
     }
   }
 

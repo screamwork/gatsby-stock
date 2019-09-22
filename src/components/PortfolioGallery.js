@@ -43,10 +43,10 @@ export const PortfolioGallery = ({ onModalChange }) => {
         </Row>
         <Row>
           {portfolios.map((portfolio, index) => (
-            <Col xs={12} md={4} key={index}>
+            <Col xs={12} md={4} lg={3} key={index}>
               <Image
                 src={portfolio.url}
-                style={{ height: `350px` }}
+                style={{ minHeight: `245px` }}
                 thumbnail
                 onClick={e => {
                   onModalChange({ show: true, img: portfolio.url })
