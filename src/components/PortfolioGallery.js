@@ -43,7 +43,7 @@ export const PortfolioGallery = ({ onModalChange }) => {
         </Row>
         <Row>
           {portfolios.map((portfolio, index) => (
-            <Col xs={12} md={6} lg={3} key={index}>
+            <Col className="col" xs={12} md={6} lg={3} key={index}>
               <div style={{padding: "5px 5px 20px 5px", backgroundColor: "white", overflow: "hidden", borderRadius: 2}}>
               <div
                 className="insta-img"
