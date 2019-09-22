@@ -22,7 +22,7 @@ export const PortfolioGallery = ({ onModalChange }) => {
   const portfolios = data.allFile.edges[0].node.childrenPortfolioJson
 
   return (
-    <div id="portfolio-gallery" style={{ background: "#282A2E" }}>
+    <div id="portfolio-gallery" style={{ background: "#282A2E", backgroundImage: `url(sectionbg1.png)` }}>
       <Container style={{ padding: "6rem 0 6rem" }}>
         <Row>
           <Col sm={12} className="textCenteredOnXs">
