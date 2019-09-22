@@ -1,4 +1,12 @@
-.portfolio-gallery {
+#portfolio-gallery {
+
+  @media (max-width: 568px) {
+    .container {
+      padding-top: 3rem !important;
+    }
+  }
+
+  portfolio-gallery
   img {
     &:hover {
       cursor: pointer;
@@ -7,6 +15,14 @@
 }
 
 .blurbs {
+  @media (max-width: 568px) {
+    > div {
+      padding-top: 0 !important;
+    }
+    .container {
+      padding-bottom: 0 !important;
+    }
+  }
   .blurb-inner {
     display: flex;
     justify-content: center;
@@ -15,10 +31,32 @@
     padding: 1rem;
     border: 4px solid #e5e5e5;
     box-shadow: 3px 3px 3px 1px #eee;
+
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 767px) {
+    }
+    @media (max-width: 568px) {
+      margin-bottom: 0 !important;
+    }
   }
 }
 
 .address {
+  @media (max-width: 568px) {
+    .row > div {
+      padding: 0 40px;
+    }
+    .container {
+      padding-bottom: 3rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .row >div:first-child {
+      margin-bottom: 40px;
+    }
+  }
   h3 {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -42,5 +80,64 @@
       background: #4fcc70;
       color: white !important;
     }
+  }
+}
+
+// *** resp *** //
+footer.footer {
+  @media (max-width: 991px) {
+  }
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 568px) {
+    padding: 0 0.75rem;
+    .container .row > div {
+    }
+    .year {
+      display: none;
+    }
+    .footer-divider {
+      display: none;
+    }
+  }
+}
+
+#contact {
+  @media (max-width: 991px) {
+  }
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 568px) {
+    .container {
+      padding: 0 !important;
+    }
+    .contact-form {
+      padding: 1.25rem;
+    }
+  }
+}
+#pricing {
+  @media (max-width: 568px) {
+    #generic_price_table {
+      padding-top: 3rem !important;
+    }
+  }
+}
+#services {
+  @media (max-width: 568px) {
+    .container {
+      padding-top: 3rem !important;
+    }
+  }
+}
+#carousel {
+  @media (max-width: 568px) {
+    padding-top: 0 !important;
+  }
+}
+
+.textCenteredOnXs {
+  @media (max-width: 568px) {
+    text-align: center;
   }
 }

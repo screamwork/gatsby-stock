@@ -17,7 +17,7 @@ export const PriceTables = ({ onPackageSelect }) => {
       <div id="generic_price_table" style={{ padding: "9rem 0" }}>
         <div className="container">
           <Row>
-            <Col xs={12}>
+            <Col className="textCenteredOnXs" xs={12}>
               <h2
                 style={{
                   marginBottom: "2.5rem",

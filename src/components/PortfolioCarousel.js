@@ -22,7 +22,7 @@ export const PortfolioCarousel = () => {
   const portfolios = data.allFile.edges[0].node.childrenPortfolioJson
 
   return (
-    <div style={{ padding: "3.5rem 0 0" }}>
+    <div id="carousel" style={{ padding: "3.5rem 0 0" }}>
       <Carousel fade={true}>
         {portfolios.map((portfolio, index) => (
           <Carousel.Item key={index} style={{ maxHeight: `450px` }}>

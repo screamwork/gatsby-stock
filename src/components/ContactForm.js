@@ -1,11 +1,13 @@
 import React from "react"
-import { Button, Container, Form } from "react-bootstrap"
+import { Button, Col, Container, Form, Row } from "react-bootstrap"
 
 export const ContactForm = ({ onChildStateChange, myForm }) => {
   return (
     <div id="contact" style={{ background: "whiteSmoke" }}>
       <Container style={{ padding: "6rem 0 6rem" }}>
-        <h2
+        <Row>
+          <Col sm={12} className="textCenteredOnXs">
+          <h2
           style={{
             marginBottom: "2.5rem",
             fontWeight: 500,
@@ -17,7 +19,11 @@ export const ContactForm = ({ onChildStateChange, myForm }) => {
         >
           Kontakt
         </h2>
+          </Col>
+        </Row>
+        
         <form
+          className="contact-form"
           style={{ padding: "2.5rem", background: "#e5e5e5" }}
           method="POST"
           netlify-honeypot="bot-field"

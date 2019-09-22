@@ -7,48 +7,69 @@ export const Blurbs = () => {
     <div className="blurbs">
       <Container style={{ padding: "6rem 0 3.5rem" }}>
         <Row>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={6} lg={4}>
             <div className="blurb-inner">
               <div style={{ padding: 20 }}>
                 <FaBeer size={`64`} />
               </div>
-              <h3 style={{ padding: `1.75rem 0`, color: "#4fcc70", fontWeight: 300 }}>
+              <h3
+                style={{
+                  padding: `1.75rem 0`,
+                  color: "#4fcc70",
+                  fontWeight: 300,
+                }}
+              >
                 {`Erfahrung`.toUpperCase()}
               </h3>
               <p style={{ textAlign: "center", padding: `0 .5rem` }}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et dolores et ea rebum.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et dolores et ea
+                rebum.
               </p>
             </div>
           </Col>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={6} lg={4}>
             <div className="blurb-inner">
               <div style={{ padding: 20 }}>
                 <FaTruckMonster size={`64`} />
               </div>
-              <h3 style={{ padding: `1.75rem 0`, color: "#4fcc70", fontWeight: 300 }}>
+              <h3
+                style={{
+                  padding: `1.75rem 0`,
+                  color: "#4fcc70",
+                  fontWeight: 300,
+                }}
+              >
                 {`Professionalität`.toUpperCase()}
               </h3>
               <p style={{ textAlign: "center", padding: `0 .5rem` }}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod dolore magna aliquyam erat, sed diam
+                voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum.
               </p>
             </div>
           </Col>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={6} lg={4}>
             <div className="blurb-inner">
               <div style={{ padding: 20 }}>
                 <FaChess size={`64`} />
               </div>
-              <h3 style={{ padding: `1.75rem 0`, color: "#4fcc70", fontWeight: 300 }}>
+              <h3
+                style={{
+                  padding: `1.75rem 0`,
+                  color: "#4fcc70",
+                  fontWeight: 300,
+                }}
+              >
                 {`Preis - Leistung`.toUpperCase()}
               </h3>
               <p style={{ textAlign: "center", padding: `0 .5rem` }}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor magna aliquyam erat, sed diam
+                voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum.
               </p>
             </div>
           </Col>
