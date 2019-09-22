@@ -17,7 +17,13 @@ export const ContactForm = ({ onChildStateChange, onFormSend, myForm }) => {
         >
           Kontakt
         </h2>
-        <Form style={{ padding: "2.5rem", background: "#e5e5e5" }}>
+        <Form
+          style={{ padding: "2.5rem", background: "#e5e5e5" }}
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+          <input type="hidden" name="bot-field" />
           <Form.Group>
             <Form.Label>Email-Adresse</Form.Label>
             <Form.Control
