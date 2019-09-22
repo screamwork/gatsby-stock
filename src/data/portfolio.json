@@ -13,5 +13,10 @@
     "title": "Image 3",
     "subtitle": "des Dritte in der Woche",
     "url": "portfolio3.jpg"
+  },
+  {
+    "title": "Image 4",
+    "subtitle": "des Vierte und Letzte in der Woche",
+    "url": "car1.jpg"
   }
 ]

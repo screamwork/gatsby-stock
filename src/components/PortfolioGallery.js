@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { Col, Container, Image, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 
 export const PortfolioGallery = ({ onModalChange }) => {
   const data = useStaticQuery(graphql`
@@ -39,19 +39,25 @@ export const PortfolioGallery = ({ onModalChange }) => {
             >
               Instagram
             </h2>
-            </Col>
+          </Col>
         </Row>
         <Row>
           {portfolios.map((portfolio, index) => (
-            <Col xs={12} md={4} lg={3} key={index}>
-              <Image
-                src={portfolio.url}
-                style={{ minHeight: `245px` }}
-                thumbnail
+            <Col xs={12} md={6} lg={3} key={index}>
+              <div style={{padding: "5px 5px 20px 5px", backgroundColor: "white", overflow: "hidden", borderRadius: 2}}>
+              <div
+                className="insta-img"
+                style={{
+                  overflow: "hidden",
+                  backgroundImage: `url(${portfolio.url})`,
+                  backgroundSize: "cover",
+                  minHeight: "245px",
+                }}
                 onClick={e => {
                   onModalChange({ show: true, img: portfolio.url })
                 }}
-              />
+              ></div>
+              </div>
             </Col>
           ))}
         </Row>

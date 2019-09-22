@@ -153,3 +153,11 @@ footer.footer {
     display: none;
   }
 }
+
+.insta-img {
+  overflow: hidden;
+  transition: .7s all;
+  &:hover {
+    transform: scale(1.2)
+  }
+}
