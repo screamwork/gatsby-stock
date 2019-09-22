@@ -2,7 +2,7 @@ import { functions, isEqual, omit } from "lodash"
 import React, { useEffect, useRef } from "react"
 import { Container } from "react-bootstrap"
 
-function Map({ options, onMount, className }) {
+function GoogleMap({ options, onMount, className }) {
   const divProps = { ref: useRef(), className }
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const shouldUpdate = (prevProps, nextProps) => {
   )
 }
 
-export default React.memo(Map, shouldUpdate)
+export default React.memo(GoogleMap, shouldUpdate)
 
 const addMarkers = links => map => {
   links.forEach((link, index) => {
@@ -86,7 +86,7 @@ const addMarkers = links => map => {
 const LAT = parseFloat(48.73)
 const LNG = parseFloat(13.49)
 
-Map.defaultProps = {
+GoogleMap.defaultProps = {
   options: {
     center: { lat: LAT, lng: LNG },
     zoom: 11,

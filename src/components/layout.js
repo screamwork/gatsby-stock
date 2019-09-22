@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Footer } from "./Footer"
 import Header from "./header"
-import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +30,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={title} siteSlogan={slogan} />
       <div style={{ display: "flex", flexDirection: "column" }}>
         <main
-          style={{ flex: 1, minHeight: `calc(100vh - 113px)`, marginTop: 63 }}
+          style={{ flex: 1, minHeight: `calc(100vh - 106px)`, marginTop: 56 }}
         >
           {children}
         </main>

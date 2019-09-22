@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import { Col, Container, Image, Row } from "react-bootstrap"
 import { FaFacebook, FaInstagram } from "react-icons/fa"
+import logo from "../../static/logo-stogg.png"
 
 export const Footer = () => {
   return (
@@ -12,10 +13,7 @@ export const Footer = () => {
             © {new Date().getFullYear()}
             {` `}
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-              <Image
-                src={`logo-stogg.png`}
-                style={{ height: 30, marginBottom: 0 }}
-              />
+              <Image src={logo} style={{ height: 30, marginBottom: 0 }} />
             </Link>{" "}
             <span style={{ margin: "0 1rem" }}>|</span>
             <Link

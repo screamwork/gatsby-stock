@@ -6,8 +6,8 @@ import { Address } from "../components/Address"
 import StyledBackgroundSection from "../components/BackgroundSection"
 import { Blurbs } from "../components/Blurbs"
 import { ContactForm } from "../components/ContactForm"
+import GoogleMap from "../components/GoogleMap"
 import Layout from "../components/layout"
-import Map from "../components/Map"
 import { PortfolioCarousel } from "../components/PortfolioCarousel"
 import { PortfolioGallery } from "../components/PortfolioGallery"
 import { PriceTables } from "../components/PriceTables"
@@ -126,11 +126,10 @@ class IndexPage extends React.Component {
               <Services />
               <PortfolioGallery onModalChange={this.onModalChange} />
               <PriceTables onPackageSelect={this.onPackageSelect} />
-              <Map />
+              <GoogleMap className="google-map-stogg" />
               <ContactForm
                 onChildStateChange={this.onChildStateChange}
                 myForm={myForm}
-                // onFormSend={onFormSend}
               />
               <Address />
             </Layout>

@@ -14,7 +14,7 @@
     flex-direction: column;
     padding: 1rem;
     border: 4px solid #e5e5e5;
-    box-shadow: 3px 3px 3px 1px #eee;  
+    box-shadow: 3px 3px 3px 1px #eee;
   }
 }
 
@@ -32,5 +32,15 @@
   svg {
     margin-right: 7.5px;
     font-size: 15px;
+  }
+}
+
+.generic_price_btn {
+  button {
+    background: white;
+    &:hover {
+      background: #4fcc70;
+      color: white !important;
+    }
   }
 }

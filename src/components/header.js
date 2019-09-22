@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { Image, Nav, Navbar } from "react-bootstrap"
+import logo from "../../static/logo-stogg.png"
 
 const Header = ({ siteTitle, siteSlogan }) => {
   // const data = useStaticQuery(graphql`
@@ -29,7 +30,7 @@ const Header = ({ siteTitle, siteSlogan }) => {
           fontSize: 12,
         }}
       >
-        <Image src={`logo-stogg.png`} style={{ height: 50, marginBottom: 0 }} />
+        <Image src={logo} style={{ height: 40, marginBottom: 0 }} />
         {siteTitle}
       </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
