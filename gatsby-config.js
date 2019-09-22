@@ -22,15 +22,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: `WP`,
-        fieldName: `wp`,
-        url: `http://localhost/wp2019/graphql`,
-        refetchInterval: 60,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
