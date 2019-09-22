@@ -31,7 +31,7 @@ const Header = ({ siteTitle, siteSlogan }) => {
         }}
       >
         <Image src={logo} style={{ height: 40, marginBottom: 0 }} />
-        {siteTitle}
+        <span className="displayNoneOnXs">{siteTitle}</span>
       </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

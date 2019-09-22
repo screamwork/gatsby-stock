@@ -1,5 +1,4 @@
 #portfolio-gallery {
-
   @media (max-width: 568px) {
     .container {
       padding: 3rem 0 !important;
@@ -15,8 +14,7 @@
     }
   }
 
-  portfolio-gallery
-  img {
+  portfolio-gallery img {
     &:hover {
       cursor: pointer;
     }
@@ -62,7 +60,7 @@
     }
   }
   @media (max-width: 767px) {
-    .row >div:first-child {
+    .row > div:first-child {
       margin-bottom: 40px;
     }
   }
@@ -148,5 +146,10 @@ footer.footer {
 .textCenteredOnXs {
   @media (max-width: 568px) {
     text-align: center;
+  }
+}
+.displayNoneOnXs {
+  @media (max-width: 568px) {
+    display: none;
   }
 }
